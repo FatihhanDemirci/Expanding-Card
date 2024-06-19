@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.img {
+  height: 75vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  flex: 0.5;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+}
+
+.img h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin: 0;
+  opacity: 0;
+}
+
+.img.active {
+  flex: 5;
+}
+
+.img.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
